@@ -27,7 +27,10 @@ tests = [ {'description': 'PINA: PINB: PINC: 0x40 => PORTD: 0x31',
     'steps': [ {'inputs': [('PINA',0x40), ('PINB',0xFF), ('PINC',0x00)], 'iterations': 5 } ],
     'expected': [('PORTD',0x4F)],
     },
-
+    {'description': 'PINA: 0x00 PINB: 0x38 PINC: 0x55 => PORTD: 0x23',
+    'steps': [ {'inputs': [('PINA',0x00), ('PINB',0x38), ('PINC',0x55)], 'iterations': 5 } ],
+    'expected': [('PORTD',0x23)],
+    },
 
     ]
 #watch = ['cntavail']
