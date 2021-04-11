@@ -19,22 +19,22 @@ tests = [ {'description': 'PINA: PINB: PINC: 0x40 => PORTD: 0x31',
     'steps': [ {'inputs': [('PINA',0x40), ('PINB',0x40), ('PINC',0x40)], 'iterations': 5 } ],
     'expected': [('PORTD',0x31)],
     },
-    {'description': 'PINA: 0x40 PINB: 0x33 PINC: 0xB2 => PORTD: 0x49',
+    {'description': 'PINA: 0x40 PINB: 0x33 PINC: 0xB2 => PORTD: 0x4B',
     'steps': [ {'inputs': [('PINA',0x40), ('PINB',0x33), ('PINC',0xB2)], 'iterations': 5 } ],
-    'expected': [('PORTD',0x49)],
+    'expected': [('PORTD',0x4B)],
     },
     {'description': 'PINA: 0x40 PINB: 0xFF PINC: 0x00 => PORTD: 0x4F',
     'steps': [ {'inputs': [('PINA',0x40), ('PINB',0xFF), ('PINC',0x00)], 'iterations': 5 } ],
     'expected': [('PORTD',0x4F)],
     },
-    {'description': 'PINA: 0x00 PINB: 0x38 PINC: 0x55 => PORTD: 0x23',
-    'steps': [ {'inputs': [('PINA',0x00), ('PINB',0x38), ('PINC',0x55)], 'iterations': 5 } ],
-    'expected': [('PORTD',0x23)],
+    {'description': 'PINA: 0x00 PINB: 0x37 PINC: 0x55 => PORTD: 0x23',
+    'steps': [ {'inputs': [('PINA',0x00), ('PINB',0x37), ('PINC',0x55)], 'iterations': 5 } ],
+    'expected': [('PORTD',0x22)],
     },
 
     ]
-#watch = ['cntavail']
 
+watch = ['total']
 
 # Optionally you can add a set of "watch" variables these need to be global or static and may need
 # to be scoped at the function level (for static variables) if there are naming conflicts. The 

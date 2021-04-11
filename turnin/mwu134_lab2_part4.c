@@ -1,9 +1,9 @@
-/*	Author: mwu134
- *  Partner(s) Name: Min Chen Wu
+/* 	Author: mwu134
+ *  	Partner(s) Name: Min Chen Wu
  *	Lab Section: 22
  *	Assignment: Lab 2  Exercise 4
  *	Exercise Description: [optional - include for your own benefit]
- *
+ *	 
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
  */
@@ -32,11 +32,12 @@ int main(void) {
 	//computation
 	total = (tmpA + tmpB + tmpC) >> 2;
 	PORTD = total;
-	if((tmpA+tmpB+tmpC) > 140){
+	if((tmpA + tmpB + tmpC) > 140){
 		PORTD = (PORTD & 0xFE) | 0x01;
-	}else if(abs(tmpA - tmpB) > 80 || abs(tmpA - tmpC) > 80 || abs(tmpB - tmpC) > 80){
+	}else PORTD = PORTD & 0xFE;
+	if(abs(tmpA - tmpB) > 80 || abs(tmpA - tmpC) > 80 || abs(tmpB - tmpC) > 80){
 		PORTD = (PORTD & 0xFD) | 0x02;
-	}
+	}else PORTD = PORTD & 0xFD;
 	
 
     }
